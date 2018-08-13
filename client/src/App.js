@@ -23,10 +23,10 @@ class App extends Component {
       <BrowserRouter>
         <div>       
           <Switch>
-            <Route path="/comment/:id" component={CommentContainer} />
-            <Route path="/contact/:id" component={ContactContainer} />
-            <Route path="/product/:id" component={ProductContainer} />
-            <Route path="/vehicle/:id" component={VehicleContainer} />
+            <Route path="/comments/:id" component={CommentContainer} />
+            <Route path="/contacts/:id" component={ContactContainer} />
+            <Route path="/products/:id" component={ProductContainer} />
+            <Route path="/vehicles/:id" component={VehicleContainer} />
             <Route path="/" component={Main} />
           </Switch>
         </div>

@@ -33,9 +33,13 @@ class CreateThings extends React.Component {
             if (this.props.createComment) {
               this.props.createComment(this.state.comment);
             }
+            const emptyComment = {body: ''}
+            this.setState({
+              comment: Object.assign(this.state.comment, emptyComment)
+            })
           }}>
             <div>
-              Body: <input onChange={(e) => {
+              Body: <input value = {this.state.comment.body} onChange={(e) => {
                 const comment = {body: e.target.value};
                 this.setState({
                   comment: Object.assign(this.state.comment,comment)
@@ -52,9 +56,13 @@ class CreateThings extends React.Component {
             if (this.props.createContact) {
               this.props.createContact(this.state.contact);
             }
+            const emptyContact = {name: '', occupation: '', avatar: ''};
+            this.setState({
+              contact: emptyContact
+            })
           }}>
             <div>
-              Name: <input onChange={(e) => {
+              Name: <input value = {this.state.contact.name} onChange={(e) => {
                 const contact = {name: e.target.value};
                 this.setState({
                   contact: Object.assign(this.state.contact,contact)
@@ -62,7 +70,7 @@ class CreateThings extends React.Component {
               }} />
             </div>
             <div>
-              Occupation: <input onChange={(e) => {
+              Occupation: <input value = {this.state.contact.occupation} onChange={(e) => {
                 const contact = {occupation: e.target.value};
                 this.setState({
                   contact: Object.assign(this.state.contact,contact)
@@ -70,7 +78,7 @@ class CreateThings extends React.Component {
               }} />
             </div>
             <div>
-              Avatar: <input onChange={(e) => {
+              Avatar: <input value = {this.state.contact.avatar} onChange={(e) => {
                 const contact = {avatar: e.target.value};
                 this.setState({
                   contact: Object.assign(this.state.contact,contact)

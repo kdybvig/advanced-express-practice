@@ -3,7 +3,7 @@ import CollapsableMapper from "./CollapsableMapper";
 
 function Products(props) {
   return (
-    <CollapsableMapper data={props.products} path="product" field="name" />
+    <CollapsableMapper data={props.products} path="products" field="name" />
   );
 }
 export default Products;
